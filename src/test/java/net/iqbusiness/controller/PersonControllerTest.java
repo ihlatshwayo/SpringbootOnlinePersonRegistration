@@ -61,7 +61,7 @@ public class PersonControllerTest {
 
 
     @Test
-    public void whenAddValidPerson_thenReturnStatus201() throws Exception {
+    public void whenAddValidPerson_thenReturnCreatedPerson() throws Exception {
 
         Mockito.when(personService.addPerson(validNewPerson)).thenReturn(savedPerson);
         mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/persons/add")
